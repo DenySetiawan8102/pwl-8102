@@ -10,6 +10,16 @@ class Siswa extends DBClass{
 		
 		return $r;
 	} 
+
+	public function getSiswaFull(){
+		$str = "select nis,full_name,email,nationality from siswa s
+		join nationality n on s.id_nationality = n.id_nationality
+		order by full_name";		
+		$r = $this->getRows($str);
+		$this->close();
+		
+		return $r;	
+	}
 	
 	public function editSiswa($id, $data = array()){
 		$str = "Update siswa set ";

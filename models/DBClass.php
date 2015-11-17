@@ -60,14 +60,6 @@
 			mysql_close($this->db) or die ("Database Access Error...".mysql_error());
 			$this->db = false;
 		}
-
-		/*
-		*   Parameter:
-		*   $sql - (string ) Select query
-		*
-		*        - if data exist this function return data in associate array format
-        *        - else reutrn empty array
-		*/
 		
 		function getRows($sql)
 		{
@@ -76,7 +68,7 @@
 			$this->rowColl = mysql_query($sql) or die("Error : ".mysql_error());
 			$rows  = array();
 			
-			if( count($this->rowCol) > 1) mysql_data_seek($this->rowColl,0);
+			if( count($this->rowColl) > 1) mysql_data_seek($this->rowColl,0);
 			
 			while ($row = mysql_fetch_array($this->rowColl, MYSQL_ASSOC))
 				$rows[] = $row;
