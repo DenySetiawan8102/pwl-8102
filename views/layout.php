@@ -27,7 +27,7 @@
             </div>    
             <div class="col-md-2">
                 <div class="alert alert-danger" role="alert">
-                    <a href="login.php">Logout</a>
+                    <a href="logout.php">Logout</a>
                 </div>
             </div>    
         </div>    
@@ -48,6 +48,9 @@
                     <label>Nationality</label>
                     <select name="nat" class="form-control">
                         <option>--select nationality--</option>
+                        <?php foreach($data['nat'] as $n):?>
+                        <option value="<?php echo $n['id']?>"><?php echo $n['n']?></option>
+                        <?php endforeach?>
                     </select>    
                     <br />
                     <button type="submit" class="btn btn-success">Save</button>
