@@ -63,7 +63,7 @@
               <ul class="sidebar-menu" id="nav-accordion">
               
               	  <p class="centered"><a href="profile.php"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></a></p>
-              	  <h5 class="centered">Admin</h5>
+              	  <h5 class="centered">Arif Laksito</h5>
               	  	
                   <li class="mt">
                       <a href="dashboard.php">
