@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	require_once 'DBClass.php';
 	$db = new DBClass();
 ?>
@@ -37,35 +37,33 @@ float: right;
 font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>   
         <!-- /. NAV TOP  -->
-        <?php include ('v_left.php'); ?>        
+        <?php include ('v_left.php'); ?>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>Students Data</h2>   
-                        <h5>Manage Data Students.</h5>
+                     <h2>List Data Nationality</h2>   
+                        <h5>Data Nationality for Students. </h5>
                     </div>
                 </div>              
                  <!-- /. ROW  -->
                   <hr />
                 <div class="row">
 					<?php 
-						$sql = "Select * from siswa";
+						$sql = "Select * from nationality";
 						$row = $db->getRows($sql);
 					?>
 					
 					<table class='table table-striped'>
 						<tr>
-							<th>NIS</th>
-							<th>Fullname</th>
-							<th>Email</th>
+							<th>Code</th>
+							<th>Nationality</th>
 						</tr>
 						<?php foreach($row as $siswa):?>
 							<tr>
-								<td><?php echo $siswa['nis']?></td>
-								<td><?php echo $siswa['full_name']?></td>
-								<td><?php echo $siswa['email']?></td>
+								<td><?php echo $siswa['code']?></td>
+								<td><?php echo $siswa['nationality']?></td>
 							</tr>
 						<?php endforeach?>
 					</table>
