@@ -12,6 +12,10 @@
                      <li>
                         <a href="nat.php"><i class="fa fa-desktop fa-3x"></i>Nationality</a>
                     </li>
+					
+					 <li>
+                        <a href="pay.php"><i class="fa fa-money fa-3x"></i>Payment</a>
+                    </li>
                    
                 </ul>
                

@@ -51,7 +51,8 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
                   <hr />
                 <div class="row">
 					<?php 
-						$sql = "Select * from siswa";
+						$sql = "Select * from siswa s join nationality n 
+						       on s.id_nationality=n.id_nationality";
 						$row = $db->getRows($sql);
 					?>
 					
@@ -59,12 +60,14 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
 						<tr>
 							<th>NIS</th>
 							<th>Fullname</th>
+							<th>Nationality</th>
 							<th>Email</th>
 						</tr>
 						<?php foreach($row as $siswa):?>
 							<tr>
 								<td><?php echo $siswa['nis']?></td>
 								<td><?php echo $siswa['full_name']?></td>
+								<td><?php echo $siswa['nationality']?></td>
 								<td><?php echo $siswa['email']?></td>
 							</tr>
 						<?php endforeach?>

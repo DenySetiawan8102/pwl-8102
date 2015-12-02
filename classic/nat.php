@@ -59,11 +59,18 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-d
 						<tr>
 							<th>Code</th>
 							<th>Nationality</th>
+							<th>Action</th>
 						</tr>
-						<?php foreach($row as $siswa):?>
+						<?php foreach($row as $nat):?>
 							<tr>
-								<td><?php echo $siswa['code']?></td>
-								<td><?php echo $siswa['nationality']?></td>
+								<td><?php echo $nat['code']?></td>
+								<td><?php echo $nat['nationality']?></td>
+								<td>
+									<a href="edit_nat.php?id=<?php echo $nat['id_nationality']?>">
+										<i class="fa fa-pencil"></i></a> :: 
+									<a href="del_nat.php?id=<?php echo $nat['id_nationality']?>">
+										<i class="fa fa-minus"></i></a>
+								</td>
 							</tr>
 						<?php endforeach?>
 					</table>
