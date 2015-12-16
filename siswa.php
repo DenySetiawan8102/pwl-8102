@@ -16,8 +16,6 @@ if(!empty($_POST)){
 	$name   = $_POST['input_name'];
 	$email  = $_POST['input_email'];
 	$id_nat = $_POST['input_nationality'];
-
-	//print_r($_FILES['input_file']);
 	
 	$fn = $_FILES['input_file'];
 	$ff = 'img/'.date('YmdHis').'.jpg';

@@ -32,8 +32,9 @@ class Siswa{
 		$name = $data['input_name'];
 		$email = $data['input_email'];
 		$nation = $data['input_nationality'];
+		$foto = $data['foto'];
 
-		$query = "update siswa set full_name='$name', email='$email'";
+		$query = "update siswa set full_name='$name', email='$email', foto='$foto'";
 		if($nation>0) $query.=",id_nationality='$nation'";
 		$query.= " where id_siswa=$id";
 		$this->db->putRows($query);		

@@ -16,6 +16,12 @@ $s = $siswa->readSiswa($id);
 
 if(!empty($_POST)){
 
+	$fn = $_FILES['input_file'];
+	$ff = 'img/'.date('YmdHis').'.jpg';
+	
+	copy($fn['tmp_name'], $ff);
+	$_POST['foto'] = $ff;
+
 	$siswa->updateSiswa($id, $_POST);
 	$success = "Data Berhasil di Update";
 

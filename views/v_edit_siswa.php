@@ -8,7 +8,7 @@
 
 <div class="row">
 	<div class="col-md-6">
-		<form role="form" action="" method="post">
+		<form role="form" action="" method="post" enctype="multipart/form-data">
 			<div class="form-group">
 				<label>NIS</label>
 				<input type="text" class="form-control" readonly="readonly"
@@ -35,6 +35,13 @@
 					<?php endforeach?>
 				</select>
 			</div>	
+			
+			<div class="form-group">
+		    	<label>Image</label>
+		    	<input type="file" class="form-control" name="input_file">
+
+		  	</div> 
+			
 			<button type="submit" class="btn btn-info">Submit</button>
 		</form>
 	</div>

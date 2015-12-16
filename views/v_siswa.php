@@ -34,7 +34,8 @@
 		  			<?php endforeach?>
 		  		</select>
 		  	</div>	
-				<div class="form-group">
+			
+			<div class="form-group">
 		    	<label>Image</label>
 		    	<input type="file" class="form-control" name="input_file">
 		  	</div> 
@@ -59,7 +60,13 @@
 	<?php foreach($data['siswa'] as $s):?>
 	<tr>
 		<td><?php echo $no?></td>
-		<td><img src="<?php echo $s['foto']?>" width="100px" class="img img-circle"></td>
+		<td>
+			<?php if(!empty($s['foto'])):?>
+			<img src="<?php echo $s['foto']?>" width="100px" class="img img-circle">
+			<?php else:?>
+			<img src="img/foto.jpg" width="100px" class="img img-circle">
+			<?php endif?>
+		</td>
 		<td><?php echo $s['nis']?></td>
 		<td><?php echo $s['full_name']?></td>
 		<td><?php echo $s['nationality']?></td>
