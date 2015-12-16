@@ -17,7 +17,13 @@ if(!empty($_POST)){
 	$email  = $_POST['input_email'];
 	$id_nat = $_POST['input_nationality'];
 
-	$siswa->createSiswa($id_nat, $nis, $name, $email);
+	//print_r($_FILES['input_file']);
+	
+	$fn = $_FILES['input_file'];
+	$ff = 'img/'.date('YmdHis').'.jpg';
+	
+	copy($fn['tmp_name'], $ff);
+	$siswa->createSiswa($id_nat, $nis, $name, $email, $ff);
 	$success = "Data Berhasil di Tambahkan";
 
 }

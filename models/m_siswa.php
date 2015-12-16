@@ -22,9 +22,9 @@ class Siswa{
 		return $this->db->getRows($query);		
 	}
 
-	public function createSiswa($id_nationality, $nis, $full_name, $email){
-		$query = "Insert into siswa (id_nationality, nis, full_name, email)
-			values('$id_nationality', '$nis', '$full_name', '$email')";
+	public function createSiswa($id_nationality, $nis, $full_name, $email, $ff){
+		$query = "Insert into siswa (id_nationality, nis, full_name, email, foto)
+			values('$id_nationality', '$nis', '$full_name', '$email', '$ff')";
 		$this->db->putRows($query);	
 	}
 

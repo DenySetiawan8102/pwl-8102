@@ -10,7 +10,7 @@
 <div class="row">
 	<div class="col-md-6">
 
-		<form role="form" action="" method="post">
+		<form role="form" action="" method="post" enctype="multipart/form-data">
 		  	<div class="form-group">
 		    	<label>NIS</label>
 		    	<input type="text" class="form-control" name="input_nis">
@@ -34,6 +34,11 @@
 		  			<?php endforeach?>
 		  		</select>
 		  	</div>	
+				<div class="form-group">
+		    	<label>Image</label>
+		    	<input type="file" class="form-control" name="input_file">
+		  	</div> 
+			
 		  	<button type="submit" class="btn btn-info">Submit</button>
 		</form>
 
@@ -44,6 +49,7 @@
 <table class="table table-striped">
 	<tr>
 		<th>No</th>
+		<th>Foto</th>
 		<th>NIS</th>
 		<th>Nama</th>
 		<th>Nationality</th>
@@ -53,6 +59,7 @@
 	<?php foreach($data['siswa'] as $s):?>
 	<tr>
 		<td><?php echo $no?></td>
+		<td><img src="<?php echo $s['foto']?>" width="100px" class="img img-circle"></td>
 		<td><?php echo $s['nis']?></td>
 		<td><?php echo $s['full_name']?></td>
 		<td><?php echo $s['nationality']?></td>
