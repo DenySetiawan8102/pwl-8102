@@ -16,13 +16,13 @@ if(!empty($_FILES)){
 	copy($f['tmp_name'], 'tmp.csv');
 
 	$fo = fopen('tmp.csv', 'r');
-	while($read = fgetcsv($fo)){
-		$out[] = $read;	
-		
+	$i = 1;
+	while($read = fgetcsv($fo)){		
+		$siswa->createSiswa($read[0],$read[1], $read[2], $read[3], $read[4], '');			
+		$i++;
 	}
 
-	
-
+	$data['num'] = $i;
 
 }
 

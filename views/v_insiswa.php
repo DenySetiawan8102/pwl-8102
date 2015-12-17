@@ -1,5 +1,12 @@
 <div class="row">
 	<div class="col-md-6">
+
+		<?php if(!empty($data['num'])):?>
+		<div class="alert alert-success">
+			Berhasil diimport <?php $data['num']?> data.
+		</div>
+		<?php endif?>
+
 		<form role="form" action="" method="post" enctype="multipart/form-data">			
 			
 			<div class="form-group">
