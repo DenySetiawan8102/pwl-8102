@@ -18,7 +18,7 @@ if(!empty($_FILES)){
 	$fo = fopen('tmp.csv', 'r');
 	$i = 1;
 	while($read = fgetcsv($fo)){		
-		$siswa->createSiswa($read[0],$read[1], $read[2], $read[3], $read[4], '');			
+		$siswa->createSiswa($read[0],$read[1], $read[2], $read[3], '');			
 		$i++;
 	}
 
