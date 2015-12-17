@@ -78,9 +78,9 @@
                       </a>
                   </li>
 				  <li class="mt">
-                      <a href="payment.php">
-                          <i class="fa fa-money"></i>
-                          <span>Payment</span>
+                      <a href="insiswa.php">
+                          <i class="fa fa-user"></i>
+                          <span>Import Students</span>
                       </a>
                   </li>                  
 				  <li class="mt">
